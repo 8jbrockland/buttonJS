@@ -64,6 +64,11 @@
             <button onclick="buttoni()">+1</button>
             <button onclick="buttonx()">+10</button>
         </section>
+
+        <section id="bb6" class="bigbox">
+
+            <button onclick="randomMode()">Random Color</button>
+        </section>
     </body>
     <script type="text/javascript">
         //type your code for each button below the series of comments.  All javascript must be inside the script-tags
@@ -124,7 +129,22 @@
 
             counter= counter + 10;
             doc.querySelector("#bb5 > div > span").innerHTML = counter;
+        }
 
+        //function 7
+        function randomMode(){
+            const doc=document;
+            let section1=doc.querySelector("#bb6");
+
+            let c1 = String(Math.floor((Math.random())*10));
+            let c2 = String(Math.floor((Math.random())*10));
+            let c3 = String(Math.floor((Math.random())*10));
+            let c4 = String(Math.floor((Math.random())*10));
+            let c5 = String(Math.floor((Math.random())*10));
+            let c6 = String(Math.floor((Math.random())*10));
+            let rc = c1+c2+c3+c4+c5+c6;
+
+                section1.style.backgroundColor= "#"+rc;
         }
     </script>
 </html>
